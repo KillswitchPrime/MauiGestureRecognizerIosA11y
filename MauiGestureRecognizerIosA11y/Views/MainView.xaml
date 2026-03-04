@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiGestureRecognizerIosA11y.ViewModels"
+             x:Class="MauiGestureRecognizerIosA11y.Views.MainView"
+             x:DataType="viewModels:MainViewModel"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!" />
+
+            <Label
+                Text="{Binding Title}"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="{Binding Message}"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <VerticalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click">
+                
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding IncrementCounterCommand}" />
+                </VerticalStackLayout.GestureRecognizers>
+                
+                <Image
+                    Source="dotnet_bot.png"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    Aspect="AspectFit" />
+                
+                <Label
+                    Text="Click me"
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    FontAttributes="Bold" />
+                
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
