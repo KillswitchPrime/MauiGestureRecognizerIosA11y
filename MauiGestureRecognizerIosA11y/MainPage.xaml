@@ -14,7 +14,7 @@
                 SemanticProperties.Description="dot net bot in a submarine number ten" />
 
             <Label
-                Text="Hello, World!"
+                Text="🎉 NEW VERSION - TWO BOXES BELOW! 🎉"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
@@ -24,12 +24,68 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+            <Border
+                StrokeThickness="2"
+                Stroke="#512BD4"
+                Background="#F0F0F0"
+                Padding="0"
+                StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout
+                    x:Name="CounterBtn"
+                    HorizontalOptions="Fill"
+                    Spacing="10"
+                    Padding="20">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCounterClicked" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    
+                    <Image
+                        Source="dotnet_bot.png"
+                        HeightRequest="50"
+                        Aspect="AspectFit" />
+                    
+                    <Label
+                        x:Name="CounterLabel"
+                        Text="Click me"
+                        HorizontalOptions="Center"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#512BD4"
+                        SemanticProperties.Hint="How many times have you clicked?" />
+                </VerticalStackLayout>
+            </Border>
+            
+            <Border
+                StrokeThickness="2"
+                Stroke="#28A745"
+                Background="#E8F5E9"
+                Padding="0"
+                StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout
+                    x:Name="Second"
+                    HorizontalOptions="Fill"
+                    Spacing="10"
+                    Padding="20">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCounterClicked" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    
+                    <Label
+                         Text="This is the second clickable stack layout"
+                         HorizontalOptions="Center"
+                         FontSize="16"
+                         TextColor="#28A745"/>
+                    
+                    <Label
+                        x:Name="CounterLabel2"
+                        Text="Click me"
+                        HorizontalOptions="Center"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#28A745"
+                        SemanticProperties.Hint="Ooga booga" />
+                </VerticalStackLayout>
+            </Border>
         </VerticalStackLayout>
     </ScrollView>
 

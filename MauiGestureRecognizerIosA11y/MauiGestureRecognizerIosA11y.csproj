@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net10.0-android;net10.0-ios</TargetFrameworks>
+		<TargetFrameworks>net9.0-android;net9.0-ios18.0</TargetFrameworks>
 
 		<OutputType>Exe</OutputType>
 		<RootNamespace>MauiGestureRecognizerIosA11y</RootNamespace>
@@ -18,10 +18,14 @@
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationVersion>$([System.DateTime]::Now.ToString('yyyyMMddHHmm'))</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RuntimeIdentifier Condition="'$(TargetFramework)' == 'net9.0-ios'">ios-arm64</RuntimeIdentifier>
 	</PropertyGroup>
 
 	<ItemGroup>

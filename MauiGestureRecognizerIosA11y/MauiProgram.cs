@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using MauiGestureRecognizerIosA11y.ViewModels;
+﻿using MauiGestureRecognizerIosA11y.ViewModels;
 using MauiGestureRecognizerIosA11y.Views;
+using Microsoft.Extensions.Logging;
 
 namespace MauiGestureRecognizerIosA11y;
 
