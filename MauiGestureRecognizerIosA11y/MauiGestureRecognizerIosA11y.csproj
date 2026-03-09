@@ -28,6 +28,10 @@
 		<RuntimeIdentifier Condition="'$(TargetFramework)' == 'net9.0-ios'">ios-arm64</RuntimeIdentifier>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+		<MtouchUseLlvm>true</MtouchUseLlvm>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />

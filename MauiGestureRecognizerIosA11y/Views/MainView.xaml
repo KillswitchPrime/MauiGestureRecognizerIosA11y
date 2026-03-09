@@ -27,6 +27,28 @@
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            
+            <VerticalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+                
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding IncrementCounterCommand}" />
+                </VerticalStackLayout.GestureRecognizers>
+                
+                <Image
+                    Source="dotnet_bot.png"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    Aspect="AspectFit" />
+                
+                <Label
+                    Text="Click me, I have no SemanticProperty"
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    FontAttributes="Bold" />
+                
+            </VerticalStackLayout>
 
             <VerticalStackLayout
                 Spacing="10"
@@ -44,7 +66,35 @@
                     Aspect="AspectFit" />
                 
                 <Label
-                    Text="Click me"
+                    Text="Click me, I have SemanticProperty"
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    FontAttributes="Bold" />
+                
+            </VerticalStackLayout>
+            
+            <VerticalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click">
+                
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding IncrementCounterCommand}" />
+                </VerticalStackLayout.GestureRecognizers>
+                
+                <Image
+                    Source="dotnet_bot.png"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    Aspect="AspectFit" />
+                
+                <Label
+                    Text="Click me, I have SemanticProperty"
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    FontAttributes="Bold" />
+                <Label
+                    Text=" and 2 labels!"
                     HorizontalOptions="Center"
                     FontSize="18"
                     FontAttributes="Bold" />
